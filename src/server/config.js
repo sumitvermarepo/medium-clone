@@ -4,6 +4,6 @@
  */
 
 module.exports = {
-  defaultPort: 3000,
+  defaultPort: 5000,
   jwtSecret: 'secret',
 };

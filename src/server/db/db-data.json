@@ -13,6 +13,20 @@
       "passwordHash": "$2b$10$eGtavxWlp1PwJ6VpZ4cTieDki738YPmDLndi1NckBkfEKrZ136jSS",
       "avatarUrl": "https://cdn-images-1.medium.com/fit/c/120/120/0*cmAOkoH29zoIVIBT",
       "bio": ""
+    },
+    {
+      "id": 3,
+      "username": "saurav_maurya",
+      "passwordHash": "$2b$10$klx1G/U5lwyA0rkN4DERzuX27eVzfjuiyxa3LZnz4TW1UsnqgitFq",
+      "avatarUrl": "https://cdn-images-1.medium.com/fit/c/120/120/0*cmAOkoH29zoIVIBT",
+      "bio": ""
+    },
+    {
+      "id": 4,
+      "username": "s2maurya1@gmail.com",
+      "passwordHash": "$2b$10$deVoYhOdCSypsnIWgRM9QODekq7NMj1UopU0Sl0RCZ5u8hNfrgjAq",
+      "avatarUrl": "https://cdn-images-1.medium.com/fit/c/120/120/0*cmAOkoH29zoIVIBT",
+      "bio": ""
     }
   ],
   "blogs": [
@@ -149,6 +163,10 @@
     {
       "id": "uuid - string",
       "token": "jwt - string"
+    },
+    {
+      "id": "78f7c86b-e068-427d-90aa-c53a606d6eb1",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjU0MzY5ODMyLCJleHAiOjE2NTY5NjE4MzJ9.AP7zuFaxUWMh_SZ7xCCPviCNK51X1GoHXm9XdW1Mhxg"
     }
   ]
 }
