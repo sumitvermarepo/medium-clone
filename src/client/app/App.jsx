@@ -8,6 +8,7 @@ import './assets/styles/index.scss';
 import { ContextWrapper, withContext } from './utils/context';
 import Header from './components/shared/Header';
 import Spinner from './components/shared/Spinner';
+import CreateBlog_Container from './components/screens/BlogCreate/CreateBlog_Container';
 
 const LoginScreen = Loadable({
   loader: () => import('./components/screens/auth/LoginScreen'),
@@ -44,12 +45,13 @@ const App = () => (
       <React.Fragment>
         <Header />
         <Switch>
-          <Route path="/blogs/:blogId/posts/:postId/edit" component={PostEditScreen_Container} />
-          <Route path="/blogs/:blogId/posts/:postId" component={PostViewScreen_Container} />
-          <Route path="/blogs/:blogId" component={BlogScreen_Container} />
-          <Route path="/register" component={RegisterScreenWithContext} />
-          <Route path="/login" component={LoginScreenWithContext} />
-          <Route path="/" exact component={BlogScreen_Container} />
+          <Route exact path="/blogs/:blogId/posts/:postId/edit" component={PostEditScreen_Container} />
+          <Route exact path="/blogs/:blogId/posts/:postId" component={PostViewScreen_Container} />
+          <Route exact path="/blogs/:blogId" component={BlogScreen_Container} />
+          <Route exact path="/blog/new" component={CreateBlog_Container} />
+          <Route exact path="/register" component={RegisterScreenWithContext} />
+          <Route exact path="/login" component={LoginScreenWithContext} />
+          <Route exact path="/" component={BlogScreen_Container} />
         </Switch>
       </React.Fragment>
     </Router>

@@ -50,4 +50,35 @@ router.patch('/:id', (req, res) => {
   res.json(postAfterChanges);
 });
 
+router.post('/create', async (req, res) => {
+  const reqBody = { ...req.body };
+  const newBlog = await createNewPosts(reqBody);
+  res.json({ user: newBlog });
+});
+
+router.delete('/delete/:id', (req, res) => {
+  const uid = req.params.id;
+  db.get('posts')
+    .remove({ id: Number(uid) })
+    .write();
+  /* Do actual deletion of User via ID End here!!! */
+  res.redirect('/');
+});
+
+async function createNewPosts(reqBody) {
+  const maxBlogId = db
+    .get('posts')
+    .value()
+    .map(user => user.id)
+    .reduce((acc, cur) => (cur > acc ? cur : acc));
+
+  const newPosts = db.get('posts').insert({
+    ...reqBody,
+    id: maxBlogId + 1,
+  }).write();
+
+  return newPosts;
+}
+
+
 module.exports = router;

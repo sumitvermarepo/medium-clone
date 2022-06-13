@@ -65,6 +65,28 @@ module.exports = (env) => {
           ],
         },
         {
+          test: /\.css$/,
+          use: [
+            isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                modules: true,
+                localIdentName: '_[local]_[hash:base64:5]',
+              },
+            },
+            {
+              loader: 'postcss-loader',
+              options: { sourceMap: true },
+            },
+            {
+              loader: 'sass-loader',
+              options: { sourceMap: true },
+            },
+          ],
+        },
+        {
           test: /\.module\.scss$/,
           use: [
             isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
