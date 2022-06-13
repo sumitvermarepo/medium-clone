@@ -49,7 +49,7 @@ const CreateBlog_Container = (props) => {
   };
 
 
-  const handleCancel = () => true;
+  const handleCancel = () => window.location.goBack();
 
   const onEditorChange = (data1) => {
     setContentMarkup(data1);
